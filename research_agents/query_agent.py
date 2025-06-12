@@ -1,6 +1,7 @@
 from agents import Agent
 from pydantic import BaseModel
 
+
 QUERY_AGENT_PROMPT = """You are a helpful assistant that can generate search queries for research.
 For each query, follow these steps:
 
@@ -21,9 +22,9 @@ class QueryResponse(BaseModel):
     queries: list[str]
     thoughts: str
 
-quary_agent = Agent(
+query_agent = Agent(
     name="Query Generator Agent",
     instructions=QUERY_AGENT_PROMPT,
     output_type=QueryResponse,
-    model="gpt-4o-mini",
+    model="gpt-4o-mini"
 )

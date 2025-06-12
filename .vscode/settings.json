@@ -1,0 +1,3 @@
+{
+  "python.analysis.extraPaths": ["./research_agents"]
+}
