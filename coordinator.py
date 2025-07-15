@@ -26,6 +26,7 @@ class ResearchCoordinator:
             query_response = await self.generate_queries()
             await self.perform_research_for_queries(queries=query_response.queries)
 
+            # Conduct follow-up research if needed
             while self.iteration < 3:
                 decision_response = await self.generate_followup()
 
